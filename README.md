@@ -1,4 +1,4 @@
-[8:42 pm, 12/1/2026] Rupesh Reddy 💯😈: # Customer Trends & Insights Analysis (SQL | Python | Power BI)
+ # Customer Trends & Insights Analysis (SQL | Python | Power BI)
 
 ## 📌 Project Overview
 This project analyzes *customer shopping behavior* using transactional retail data to uncover trends in *spending patterns, customer segmentation, product preferences, and subscription behavior. The goal is to provide actionable insights that help stakeholders improve **sales performance, customer satisfaction, loyalty programs, and marketing strategies*.
