@@ -94,8 +94,8 @@ Dashboard covers:
 - Revenue and purchase trends
 - Customer segmentation and loyalty
 - Subscription impact on revenue…
-[8:42 pm, 12/1/2026] Rupesh Reddy 💯😈: Customer-Trends-Insights-Analysis/ │── data/ │   ├── raw/ │   ├── processed/ │── notebooks/ │   ├── data_cleaning_feature_engineering.ipynb │── sql/ │   ├── create_tables.sql │   ├── business_queries.sql │── powerbi/ │   ├── dashboard.pbix │── reports/ │   ├── project_report.pdf │   ├── presentation.pptx │── README.md
-[8:42 pm, 12/1/2026] Rupesh Reddy 💯😈: ---
+ Customer-Trends-Insights-Analysis/ │── data/ │   ├── raw/ │   ├── processed/ │── notebooks/ │   ├── data_cleaning_feature_engineering.ipynb │── sql/ │   ├── create_tables.sql │   ├── business_queries.sql │── powerbi/ │   ├── dashboard.pbix │── reports/ │   ├── project_report.pdf │   ├── presentation.pptx │── README.md
+  ---
 
 ## 🚀 How to Run This Project
 
