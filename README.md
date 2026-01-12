@@ -1,92 +1,120 @@
-# 👨🏻‍💻Customer Behavior Data Analyst Portfolio Project
-This project represents a complete, industry standard, end-to-end data analytics workflow, designed to mirror the real responsibilities of professional analysts in modern business environments. The project encompasses all critical stages of data analysis, from data preparation and modeling to insight generation, visualization, and reporting.
-
-This project is perfect for:
-- 📊 Data Analyst aspirants who want to build a strong **Portfolio Project** for interviews and LinkedIn
-- 📚 Anyone learning Python, SQL, and Power BI
-- 💼 Professionals preparing for interviews in Data Analytics, Data Science or Product Analytics roles
-
-# **🎥 Watch this [YouTube video](https://www.youtube.com/watch?v=5PrZvPeUw60&list=PLAx-M6Di0SisFJ1rv5M_FRHUlGA5rtUf_&index=3) to implement the full project from scratch:**  
-[![Advanced Data Analysis Portfolio Project using Retail Customer Data](https://github.com/user-attachments/assets/abbb6371-a0b2-4bec-a304-7c7da98658b6)](https://www.youtube.com/watch?v=x8dfQkKTyP0&list=PLAx-M6Di0SisFJ1rv5M_FRHUlGA5rtUf_&index=2)
-🔗 *Link to Video:* [Watch on Youtube](https://www.youtube.com/watch?v=5PrZvPeUw60&list=PLAx-M6Di0SisFJ1rv5M_FRHUlGA5rtUf_&index=3)
-
+[8:42 pm, 12/1/2026] Rupesh Reddy 💯😈: # Customer Trends & Insights Analysis (SQL | Python | Power BI)
 
 ## 📌 Project Overview
-The goal of this project is to simulate a corporate-grade end-to-end data analytics workflow, demonstrating the ability to translate raw data into strategic business intelligence by:
+This project analyzes *customer shopping behavior* using transactional retail data to uncover trends in *spending patterns, customer segmentation, product preferences, and subscription behavior. The goal is to provide actionable insights that help stakeholders improve **sales performance, customer satisfaction, loyalty programs, and marketing strategies*.
 
-✅ Data Preparation,Modeling & Exploratory Data Analysis (Python): Clean and transform the raw dataset for analysis.
+The workflow is built as an end-to-end analytics pipeline:
+- *Python* → Data cleaning, transformation, and feature engineering  
+- *PostgreSQL (SQL)* → Structured business analysis through queries  
+- *Power BI* → Interactive dashboard to visualize insights and trends  
 
-✅ Data Analysis (SQL): Simulate business transactions, and run queries to extract insights on customer segments, loyalty, and purchase drivers.
+---
 
-✅ Visualization & Insights (Power BI): Build an interactive dashboard that highlights key patterns and trends, enabling stakeholders to make data-driven decisions.
+## 🎯 Business Problem Statement
+A retail company wants to better understand customer shopping behavior to improve:
+- Revenue growth and conversion
+- Customer engagement and satisfaction
+- Long-term loyalty and subscription adoption
 
-✅ Report and Presentation: Write a clear project report summarizing your key findings and business recommendations. Prepare a presentation that visually communicates insights and actionable recommendations to stakeholders.
+Management noticed changing purchase patterns across:
+- Demographics (age, gender, location)
+- Product categories and items
+- Discounts and promotional behavior
+- Review ratings and shipping preferences
+- Subscription vs non-subscription customers
 
-![Project Workflow](https://github.com/user-attachments/assets/8bbd5dc9-eb6c-40c1-8f19-c08b4107f654)
+*Overarching Business Question:*  
+> How can the company leverage consumer shopping data to identify trends, improve customer engagement, and optimize marketing and product strategies?
 
-## 🛠️ How to Use This Project
+---
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/amlanmohanty1/customer-trends-data-analysis-SQL-Python-PowerBI.git
-   cd customer-trends-data-analysis-SQL-Python-PowerBI
-   ```
-2. **Open Customer_Shopping_Behavior_Analysis.ipynb notebook**
+## 📊 Dataset Summary
+- *Total Records:* 3,900 purchases  
+- *Total Columns:* 18  
+- *Key Features:*
+  - *Customer Demographics:* Age, Gender, Location, Subscription Status
+  - *Purchase Details:* Item Purchased, Category, Purchase Amount, Season, Size, Color
+  - *Shopping Behavior:* Discount Applied, Promo Code Used, Previous Purchases, Frequency of Purchases, Review Rating, Shipping Type
+- *Missing Data:* 37 values in the Review Rating column  
 
-    This file contains:
+---
 
-      - Data Import
+## 🧰 Tech Stack
+- *Python:* pandas, numpy  
+- *SQL Database:* PostgreSQL  
+- *BI Tool:* Power BI  
+- *Version Control:* Git & GitHub  
 
-      - Data exploration
+---
 
-      - Data cleaning
+## ✅ Project Workflow
 
-      - Connection to SQL Database
-  
-3. **Load the data from Python notebook into MySQL/PostgreSQL/MS SQL Server**
+### 1) Data Preparation & Modeling (Python)
+Data cleaning and transformation were performed using Python to prepare the dataset for analysis and reporting.
 
-      - Create a database in SQL
+*Key Steps:*
+- *Data Loading:* Imported dataset using pandas  
+- *Initial Exploration:* df.info() and df.describe()  
+- *Missing Data Handling:* Imputed missing values in review_rating using *median rating per product category*  
+- *Column Standardization:* Renamed columns to *snake_case*  
+- *Feature Engineering:*
+  - Created age_group using age binning
+  - Created purchase_frequency_days from purchase behavior data
+- *Data Consistency Check:*
+  - Verified redundancy between discount_applied and promo_code_used
+  - Dropped promo_code_used
+- *Database Integration:*
+  - Connected Python workflow to PostgreSQL and loaded the cleaned dataset for SQL analysis
 
-      - Run Python code to load data into SQL database
-  
-      - Open **customer_behavior_sql_queries.sql**
-  
-      - Answer Business Questions using SQL Queries 
-      
-4. **Connect the SQL Database to Power BI**
+---
 
-      - Open **customer_behavior_dashboard.pbix**
-   
-      - Create interactive dashboard in Power BI
-  
-6. **Create Project Report and Presentation**
+### 2) Data Analysis (SQL - PostgreSQL)
+Structured SQL analysis was performed to answer critical business questions about customer behavior, loyalty, and purchase drivers.
 
-      - Create project report
-   
-      - Build presentation deck using Gamma AI
-  
-7. **Follow along with the YouTube video for full walkthrough. 👨‍💼**
+*Key Business Questions Answered:*
+1. Revenue contribution by Gender  
+2. High-spending customers who used Discounts  
+3. Top 5 Products by Review Rating  
+4. Average purchase comparison (Standard vs Express Shipping)  
+5. Subscribers vs Non-Subscribers (average spend + revenue)  
+6. Discount-dependent products (highest % of discounted purchases)  
+7. Customer segmentation (New / Returning / Loyal)  
+8. Top 3 products per category (most purchased)  
+9. Repeat buyers (>5 purchases) vs subscription likelihood  
+10. Revenue contribution by Age Group  
 
+> SQL scripts are available inside the /sql folder.
 
-## 📜 License
+---
 
-MIT — feel free to fork, star, and use in your portfolio.
+### 3) Visualization & Dashboard (Power BI)
+Created an interactive Power BI dashboard to highlight major trends and support decision-making.
 
-## 👨‍💻 About the Author
-Hey, I’m Amlan Mohanty, a Data Analyst & Content Creator.
-I break down complex data topics into simple, practical content that actually helps you land a job.
+Dashboard covers:
+- Revenue and purchase trends
+- Customer segmentation and loyalty
+- Subscription impact on revenue…
+[8:42 pm, 12/1/2026] Rupesh Reddy 💯😈: Customer-Trends-Insights-Analysis/ │── data/ │   ├── raw/ │   ├── processed/ │── notebooks/ │   ├── data_cleaning_feature_engineering.ipynb │── sql/ │   ├── create_tables.sql │   ├── business_queries.sql │── powerbi/ │   ├── dashboard.pbix │── reports/ │   ├── project_report.pdf │   ├── presentation.pptx │── README.md
+[8:42 pm, 12/1/2026] Rupesh Reddy 💯😈: ---
 
- ### 🚀 Stay Connected & Join my Data Community
-If you enjoyed this project and want to keep learning and growing as a data analyst, let’s stay in touch! I regularly share content around SQL, data analytics, portfolio projects, job tips, and more.
+## 🚀 How to Run This Project
 
-🎥 YouTube: [Amlan Mohanty](https://www.youtube.com/@amlanmohanty1)
-- Beginner-friendly tutorials, real-world projects, job and career advice
+### Step 1: Python (Cleaning + Transformation)
+1. Open Jupyter Notebook
+2. Run notebook in /notebooks/
+3. Export cleaned dataset to /data/processed/
 
-📺 Instagram: [datacareerschool](https://www.instagram.com/datacareerschool/)
-- Quick SQL tips, data memes, and behind-the-scenes content
+### Step 2: PostgreSQL (SQL Analysis)
+1. Create PostgreSQL database and tables using /sql/create_tables.sql
+2. Load cleaned dataset into the database table
+3. Execute analysis queries from /sql/business_queries.sql
 
-💼 LinkedIn: [Amlan Mohanty](https://www.linkedin.com/in/amlanmohanty1/)
-- Let’s connect professionally and grow your data career
+### Step 3: Power BI Dashboard
+1. Open the .pbix file from /powerbi/
+2. Refresh dataset connection (CSV/SQL)
+3. Use filters and slicers to explore insights
 
+--- 
+Data Analytics Project (SQL | Python | Power BI)
 
-## 💡 Thanks for checking out the project! Your support means a lot! Feel free to star ⭐ this repo or share it with someone learning Data Analytics.🚀
+---
